@@ -5,5 +5,7 @@ public class Group {
     String groupName;
     Account creator; // FK -> object
     LocalDate createDate;
-    Account [] accounts; // FK -> object
+    Account [] accounts; //danh sách thành viên
+
+
 }   

@@ -1,0 +1,12 @@
+{
+    "java.project.sourcePaths": [
+        "Assignment2/src",
+        "Assignment 4/src"
+    ],
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    }
+}

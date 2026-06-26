@@ -1,6 +1,36 @@
+import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
+        // ===== Exercise 1 - Constructor =====
+
+        // Question 1: Department constructors
+        Department dep1 = new Department();                      // a) no params
+        Department dep2 = new Department("Engineering");         // b) nameDepartment, id=0
+        System.out.println("dep1: id=" + dep1.departmentID + ", name=" + dep1.departmentName);
+        System.out.println("dep2: " + dep2);
+
+        // Question 2: Account constructors
+        Account acc1 = new Account();                            // a) no params
+        Account acc2 = new Account(2, "bob@mail.com", "bob", "Bob", "Smith");  // b)
+        Position pos = new Position();
+        Account acc3 = new Account(3, "carol@mail.com", "carol", "Carol", "White", pos); // c) createDate=now
+        Account acc4 = new Account(4, "dave@mail.com", "dave", "Dave", "Brown", pos, LocalDate.of(2024, 1, 15)); // d)
+        System.out.println("acc1: " + acc1);
+        System.out.println("acc2: " + acc2);
+        System.out.println("acc3: " + acc3);
+        System.out.println("acc4: " + acc4);
+
+        // Question 3: Group constructors
+        Group g1 = new Group();                                  // a) no params
+        Account[] members = { acc2, acc3 };
+        Group g2 = new Group("Java Team", acc2, members, LocalDate.now()); // b) Account[]
+        String[] usernames = { "alice", "eve", "mallory" };
+        Group g3 = new Group("Security Team", acc4, usernames, LocalDate.now()); // c) String[]
+        System.out.println("g1: " + g1);
+        System.out.println("g2: " + g2);
+        System.out.println("g3: " + g3);
+
     //     Scanner scanner = new Scanner(System.in);
     //     Account acc1 = new Account();
     //     Account acc2 = new Account();
@@ -62,6 +92,6 @@ public class Main {
     //     Exercise5.question4(departments);
     //     Exercise5.question5(departments);
     //     Exercise5.question6();
-        Exercise5.question7();
+    //     Exercise5.question7();
     }
 }

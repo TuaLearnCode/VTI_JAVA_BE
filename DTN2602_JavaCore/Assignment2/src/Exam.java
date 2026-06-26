@@ -1,4 +1,4 @@
-import java.time.LocalDate;
+import java.util.Date;
 
 public class Exam {
     int examID;
@@ -7,6 +7,6 @@ public class Exam {
     CategoryQuestion category;
     int duration;
     Account creator;
-    LocalDate createDate;
+    Date createDate;
     Question [] question;
 }
